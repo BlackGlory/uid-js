@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+* init ([9a2fa78](https://github.com/BlackGlory/uid-js/commit/9a2fa781b9d1f6f2cd9ebc128f1e08c62fa5dd6d))
+
+## 0.1.0 (2020-12-01)
+
+
+### Features
+
 * init ([446493f](https://github.com/BlackGlory/chan-js/commit/446493fb798fafd9aca6cb69337f09e4121b7fad))
 
 
