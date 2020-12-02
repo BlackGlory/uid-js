@@ -1,5 +1,5 @@
 import { fetch, Headers } from 'cross-fetch'
-import { HTTPError } from './errors'
+import { fromCode } from '@blackglory/http-status'
 
 export async function get(
   { baseUrl, pathname, adminPassword, signal }: {
@@ -22,5 +22,5 @@ function resolve(baseUrl: string, pathname: string): string {
 }
 
 function checkHTTPStatus(res: Response) {
-  if (!res.ok) throw new HTTPError(res)
+  if (!res.ok) throw fromCode(res.status)
 }
