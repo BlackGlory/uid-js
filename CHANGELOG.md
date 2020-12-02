@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/BlackGlory/uid-js/compare/v0.1.0...v0.1.1) (2020-12-02)
+
+
+### Bug Fixes
+
+* remove wrong changelogs ([89fe3eb](https://github.com/BlackGlory/uid-js/commit/89fe3eb02b61b290c9fbd1126f84723715473070))
+
 ## 0.1.0 (2020-12-01)
 
 
