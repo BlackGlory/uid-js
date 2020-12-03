@@ -1,4 +1,6 @@
-import { get } from './utils'
+import { fetch } from 'cross-fetch'
+import { get } from 'extra-request'
+import { url, pathname } from 'extra-request/lib/es2018/transformers'
 
 export interface UIDClientOptions {
   server: string
@@ -8,18 +10,22 @@ export class UIDClient {
   constructor(private options: UIDClientOptions) {}
 
   async nanoid(): Promise<string> {
-    const res = await get({
-      baseUrl: this.options.server
-    , pathname: '/nanoid'
-    })
+    const req = get(
+      url(this.options.server)
+    , pathname('/nanoid')
+    )
+
+    const res = await fetch(req)
     return res.text()
   }
 
   async uuid(): Promise<string> {
-    const res = await get({
-      baseUrl: this.options.server
-    , pathname: '/uuid'
-    })
+    const req = get(
+      url(this.options.server)
+    , pathname('/uuid')
+    )
+
+    const res = await fetch(req)
     return res.text()
   }
 }

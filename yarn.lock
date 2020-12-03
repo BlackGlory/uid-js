@@ -2362,6 +2362,14 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+extra-request@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/extra-request/-/extra-request-0.1.0.tgz#e7b7ed59ef2536bffe73b885617f20237803f715"
+  integrity sha512-e6Gc0Jllk/rol2ceWNUm/EAaxLttQ7u9jxocMm2oga5cYhVhtAt1qE/aP8wx/f+kEF6Lk0SRviTjin1mpA+bow==
+  dependencies:
+    "@blackglory/types" "^0.1.7"
+    cross-fetch "^3.0.6"
+
 extsprintf@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
