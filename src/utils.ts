@@ -10,8 +10,10 @@ export async function get(
   }
 ): Promise<Response> {
   const url = resolve(baseUrl, pathname)
+
   const headers = new Headers()
   if (adminPassword) headers.append('Authorization', `Bearer ${adminPassword}`)
+
   const res = await fetch(url, { headers, signal })
   checkHTTPStatus(res)
   return res
