@@ -3,9 +3,9 @@
 ## Install
 
 ```sh
-npm install --save @blackglory/uid
+npm install --save @blackglory/uid-js
 # or
-yarn add @blackglory/uid
+yarn add @blackglory/uid-js
 ```
 
 ## API
