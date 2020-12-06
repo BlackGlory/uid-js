@@ -1,2 +1,2 @@
 export * from './uid-client'
-export { HTTPError } from '@blackglory/http-status'
+export { HTTPError } from 'extra-response'
