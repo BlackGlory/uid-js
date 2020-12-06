@@ -1,8 +1,7 @@
 import { fetch } from 'cross-fetch'
 import { get } from 'extra-request'
 import { url, pathname } from 'extra-request/lib/es2018/transformers'
-import { checkHTTPStatus, toText } from './utils'
-
+import { ok, toText } from 'extra-response'
 export interface UIDClientOptions {
   server: string
 }
@@ -17,7 +16,7 @@ export class UIDClient {
     )
 
     return await fetch(req)
-      .then(checkHTTPStatus)
+      .then(ok)
       .then(toText)
   }
 
@@ -28,7 +27,7 @@ export class UIDClient {
     )
 
     return await fetch(req)
-      .then(checkHTTPStatus)
+      .then(ok)
       .then(toText)
   }
 }
