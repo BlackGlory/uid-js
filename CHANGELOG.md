@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/BlackGlory/uid-js/compare/v0.1.11...v0.1.12) (2021-01-15)
+
+
+### Bug Fixes
+
+* esm bundle ([ffc3f4b](https://github.com/BlackGlory/uid-js/commit/ffc3f4bf86c7ac118da56f8c5daf01ccbf3a0e11))
+
 ### [0.1.11](https://github.com/BlackGlory/uid-js/compare/v0.1.10...v0.1.11) (2021-01-08)
 
 ### [0.1.10](https://github.com/BlackGlory/uid-js/compare/v0.1.9...v0.1.10) (2021-01-04)
