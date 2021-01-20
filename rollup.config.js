@@ -8,16 +8,27 @@ import replace from '@rollup/plugin-replace'
 
 const UMD_NAME = 'UID'
 
+export default [
+  ...createOptions({
+    directory: 'es2015'
+  , target: 'ES2015'
+  })
+, ...createOptions({
+    directory: 'es2018'
+  , target: 'ES2018'
+  })
+]
+
 function createOptions({ directory, target }) {
   const commonPlugins = [
     replace({
       'Object.defineProperty(exports, "__esModule", { value: true });': ''
     , delimiters: ['\n', '\n']
     })
-  , typescript({ target })
-  , json()
   , resolve({ browser: true })
   , commonjs()
+  , json()
+  , typescript({ target })
   ]
 
   return [
@@ -71,14 +82,3 @@ function createOptions({ directory, target }) {
     ]
   }
 }
-
-export default [
-  ...createOptions({
-    directory: 'es2015'
-  , target: 'ES2015'
-  })
-, ...createOptions({
-    directory: 'es2018'
-  , target: 'ES2018'
-  })
-]
