@@ -67,7 +67,7 @@
   },
   "dependencies": {
     "@blackglory/http-status": "^1.0.0",
-    "@blackglory/types": "^0.3.0",
+    "@blackglory/types": "^0.3.1",
     "extra-fetch": "^1.2.0",
     "extra-request": "^1.1.7",
     "extra-response": "^0.3.3"
