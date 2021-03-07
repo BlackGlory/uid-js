@@ -16,14 +16,20 @@ yarn add @blackglory/uid-js
 new UIDClient({ server: string })
 ```
 
+```ts
+interface IUIDClientRequestOptions {
+  signal?: AbortSignal
+}
+```
+
 #### nanoid
 
 ```ts
-UIDClient#nanoid(): Promise<string>
+UIDClient#nanoid(options?: IUIDClientRequestOptions): Promise<string>
 ```
 
 #### uuid
 
 ```ts
-UIDClient#uuid(): Promise<string>
+UIDClient#uuid(options?: IUIDClientRequestOptions): Promise<string>
 ```

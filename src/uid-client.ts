@@ -1,19 +1,24 @@
 import { fetch } from 'extra-fetch'
 import { get } from 'extra-request'
-import { url, pathname } from 'extra-request/lib/es2018/transformers'
+import { url, pathname, signal } from 'extra-request/lib/es2018/transformers'
 import { ok, toText } from 'extra-response'
 
 export interface IUIDClientOptions {
   server: string
 }
 
+export interface IUIDClientRequestOptions {
+  signal?: AbortSignal
+}
+
 export class UIDClient {
   constructor(private options: IUIDClientOptions) {}
 
-  async nanoid(): Promise<string> {
+  async nanoid(options: IUIDClientRequestOptions = {}): Promise<string> {
     const req = get(
       url(this.options.server)
     , pathname('/nanoid')
+    , options.signal && signal(options.signal)
     )
 
     return await fetch(req)
@@ -21,10 +26,11 @@ export class UIDClient {
       .then(toText)
   }
 
-  async uuid(): Promise<string> {
+  async uuid(options: IUIDClientRequestOptions = {}): Promise<string> {
     const req = get(
       url(this.options.server)
     , pathname('/uuid')
+    , options.signal && signal(options.signal)
     )
 
     return await fetch(req)
