@@ -13,12 +13,16 @@ yarn add @blackglory/uid-js
 ### UIDClient
 
 ```ts
-new UIDClient({ server: string })
+new UIDClient({
+  server: string
+, keepalive?: boolean
+})
 ```
 
 ```ts
 interface IUIDClientRequestOptions {
   signal?: AbortSignal
+  keepalive?: boolean
 }
 ```
 
