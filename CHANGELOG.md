@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.21](https://github.com/BlackGlory/uid-js/compare/v0.1.20...v0.1.21) (2021-03-10)
+
+
+### Features
+
+* add keepalive option ([0861c19](https://github.com/BlackGlory/uid-js/commit/0861c1907179e8d1adcbfd2f9e082e435001f695))
+
 ### [0.1.20](https://github.com/BlackGlory/uid-js/compare/v0.1.19...v0.1.20) (2021-03-07)
 
 
