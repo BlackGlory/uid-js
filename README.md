@@ -16,6 +16,7 @@ yarn add @blackglory/uid-js
 new UIDClient({
   server: string
 , keepalive?: boolean
+, timeout?: number
 })
 ```
 
@@ -23,6 +24,7 @@ new UIDClient({
 interface IUIDClientRequestOptions {
   signal?: AbortSignal
   keepalive?: boolean
+  timeout?: number | false
 }
 ```
 
