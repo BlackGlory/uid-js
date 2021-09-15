@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.25](https://github.com/BlackGlory/uid-js/compare/v0.1.24...v0.1.25) (2021-09-15)
+
+
+### Features
+
+* add timeout ([2aa0d8d](https://github.com/BlackGlory/uid-js/commit/2aa0d8d7d038b63e2c301335b676a7c7de5bbfe7))
+
 ### [0.1.24](https://github.com/BlackGlory/uid-js/compare/v0.1.23...v0.1.24) (2021-07-03)
 
 ### [0.1.23](https://github.com/BlackGlory/uid-js/compare/v0.1.22...v0.1.23) (2021-03-19)
