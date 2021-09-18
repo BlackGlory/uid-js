@@ -1,6 +1,6 @@
 import { fetch } from 'extra-fetch'
 import { get, IHTTPOptionsTransformer } from 'extra-request'
-import { url, pathname, signal, keepalive } from 'extra-request/lib/es2018/transformers'
+import { url, pathname, signal, keepalive } from 'extra-request/transformers/index.js'
 import { ok, toText } from 'extra-response'
 import { raceAbortSignals, timeoutSignal } from 'extra-promise'
 
