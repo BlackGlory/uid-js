@@ -35,6 +35,9 @@ export class UIDClient {
     ]
   }
 
+  /**
+   * @throws {AbortError}
+   */
   async nanoid(options: IUIDClientRequestOptions = {}): Promise<string> {
     const req = get(
       ...this.getCommonTransformers(options)
@@ -46,6 +49,9 @@ export class UIDClient {
       .then(toText)
   }
 
+  /**
+   * @throws {AbortError}
+   */
   async uuid(options: IUIDClientRequestOptions = {}): Promise<string> {
     const req = get(
       ...this.getCommonTransformers(options)
