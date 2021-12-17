@@ -2,7 +2,7 @@ import { fetch } from 'extra-fetch'
 import { get, IHTTPOptionsTransformer } from 'extra-request'
 import { url, pathname, signal, keepalive } from 'extra-request/transformers/index.js'
 import { ok, toText } from 'extra-response'
-import { raceAbortSignals, timeoutSignal } from 'extra-promise'
+import { raceAbortSignals, timeoutSignal } from 'extra-abort'
 
 export interface IUIDClientOptions {
   server: string
