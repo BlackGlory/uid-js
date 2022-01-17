@@ -1,6 +1,6 @@
 import { fetch } from 'extra-fetch'
 import { get, IHTTPOptionsTransformer } from 'extra-request'
-import { url, pathname, signal, keepalive } from 'extra-request/transformers/index.js'
+import { url, pathname, signal, keepalive, header } from 'extra-request/transformers/index.js'
 import { ok, toText } from 'extra-response'
 import { raceAbortSignals, timeoutSignal } from 'extra-abort'
 
@@ -32,6 +32,7 @@ export class UIDClient {
         )
       ]))
     , keepalive(options.keepalive ?? this.options.keepalive)
+    , header('Accept-Version', '2.3.0')
     ]
   }
 
