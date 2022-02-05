@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/BlackGlory/uid-js/compare/v0.3.0...v0.3.1) (2022-02-05)
+
+
+### Features
+
+* add basic auth support ([9c60dca](https://github.com/BlackGlory/uid-js/commit/9c60dca39e20458868ca87b4bbb5eef0d78f7bd3))
+
 ## [0.3.0](https://github.com/BlackGlory/uid-js/compare/v0.2.1...v0.3.0) (2022-01-17)
 
 
