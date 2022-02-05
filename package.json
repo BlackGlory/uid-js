@@ -67,6 +67,7 @@
     "extra-abort": "^0.1.0",
     "extra-fetch": "^1.8.4",
     "extra-request": "^4.0.1",
-    "extra-response": "^0.3.8"
+    "extra-response": "^0.3.8",
+    "justypes": "^0.1.6"
   }
 }

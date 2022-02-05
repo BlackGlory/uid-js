@@ -1,11 +1,16 @@
 import { fetch } from 'extra-fetch'
 import { get, IHTTPOptionsTransformer } from 'extra-request'
-import { url, pathname, signal, keepalive, header } from 'extra-request/transformers/index.js'
+import { url, pathname, signal, keepalive, header, basicAuth } from 'extra-request/transformers/index.js'
 import { ok, toText } from 'extra-response'
 import { raceAbortSignals, timeoutSignal } from 'extra-abort'
+import { Falsy } from 'justypes'
 
 export interface IUIDClientOptions {
   server: string
+  basicAuth?: {
+    username: string
+    password: string
+  }
   keepalive?: boolean
   timeout?: number
 }
@@ -21,9 +26,12 @@ export class UIDClient {
 
   private getCommonTransformers(
     options: IUIDClientRequestOptions
-  ): Array<IHTTPOptionsTransformer> {
+  ): Array<IHTTPOptionsTransformer | Falsy> {
+    const auth = this.options.basicAuth
+
     return [
       url(this.options.server)
+    , auth && basicAuth(auth.username, auth.password)
     , signal(raceAbortSignals([
         options.signal
       , options.timeout !== false && (

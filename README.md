@@ -15,6 +15,10 @@ yarn add @blackglory/uid-js
 ```ts
 new UIDClient({
   server: string
+, basicAuth?: {
+    username: string
+  , password: string
+  }
 , keepalive?: boolean
 , timeout?: number
 })
