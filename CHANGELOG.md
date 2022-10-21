@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/BlackGlory/uid-js/compare/v0.3.4...v0.4.0) (2022-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* Removed `HTTPError`, `AbortError`
+
+* remove `HTTPError`, `AbortError` ([1e4853a](https://github.com/BlackGlory/uid-js/commit/1e4853a916244409be6737f8b239158d9f8575ef))
+
 ### [0.3.4](https://github.com/BlackGlory/uid-js/compare/v0.3.3...v0.3.4) (2022-09-30)
 
 
