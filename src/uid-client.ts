@@ -1,6 +1,6 @@
 import { fetch } from 'extra-fetch'
 import { get, IHTTPOptionsTransformer } from 'extra-request'
-import { url, pathname, signal, keepalive, header, basicAuth } from 'extra-request/transformers/index.js'
+import { url, appendPathname, signal, keepalive, header, basicAuth } from 'extra-request/transformers/index.js'
 import { ok, toText } from 'extra-response'
 import { raceAbortSignals, timeoutSignal } from 'extra-abort'
 import { Falsy } from 'justypes'
@@ -50,7 +50,7 @@ export class UIDClient {
   async nanoid(options: IUIDClientRequestOptions = {}): Promise<string> {
     const req = get(
       ...this.getCommonTransformers(options)
-    , pathname('/nanoid')
+    , appendPathname('/nanoid')
     )
 
     return await fetch(req)
@@ -64,7 +64,7 @@ export class UIDClient {
   async uuid(options: IUIDClientRequestOptions = {}): Promise<string> {
     const req = get(
       ...this.getCommonTransformers(options)
-    , pathname('/uuid')
+    , appendPathname('/uuid')
     )
 
     return await fetch(req)
