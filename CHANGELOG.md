@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/BlackGlory/uid-js/compare/v0.4.0...v0.4.1) (2022-10-23)
+
+
+### Bug Fixes
+
+* replace `pathname` with `appendPathname` ([1a9533b](https://github.com/BlackGlory/uid-js/commit/1a9533b4eac9c4bc8bf7fbdfc9c0cd7054f70098))
+
 ## [0.4.0](https://github.com/BlackGlory/uid-js/compare/v0.3.4...v0.4.0) (2022-10-21)
 
 
