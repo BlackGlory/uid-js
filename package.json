@@ -66,7 +66,7 @@
   "dependencies": {
     "@blackglory/http-status": "^1.0.1",
     "extra-abort": "^0.1.0",
-    "extra-fetch": "^1.8.4",
+    "extra-fetch": "^1.9.1",
     "extra-request": "^4.0.1",
     "extra-response": "^0.3.8",
     "justypes": "^3.0.0"
