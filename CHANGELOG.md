@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/BlackGlory/uid-js/compare/v0.4.2...v0.5.0) (2022-12-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* - It is a ESM now.
+- It requires UID v3
+- The minimal version of Node.js is 16
+
+* upgrade dependencies ([e1b1845](https://github.com/BlackGlory/uid-js/commit/e1b1845bcb0357bf451d27b3e62ea4ce7bf141e6))
+
 ### [0.4.2](https://github.com/BlackGlory/uid-js/compare/v0.4.1...v0.4.2) (2022-10-31)
 
 ### [0.4.1](https://github.com/BlackGlory/uid-js/compare/v0.4.0...v0.4.1) (2022-10-23)
