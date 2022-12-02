@@ -1,6 +1,7 @@
-import { server } from '@test/uid.mock'
-import { UIDClient } from '@src/uid-client'
+import { server } from '@test/uid.mock.js'
+import { UIDClient } from '@src/uid-client.js'
 import '@blackglory/jest-matchers'
+import './polyfill.js'
 
 beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
 beforeEach(() => server.resetHandlers())

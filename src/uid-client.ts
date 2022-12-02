@@ -1,6 +1,6 @@
 import { fetch } from 'extra-fetch'
-import { get, IHTTPOptionsTransformer } from 'extra-request'
-import { url, appendPathname, signal, keepalive, header, basicAuth } from 'extra-request/transformers/index.js'
+import { get, IRequestOptionsTransformer } from 'extra-request'
+import { url, appendPathname, signal, keepalive, header, basicAuth } from 'extra-request/transformers'
 import { ok, toText } from 'extra-response'
 import { raceAbortSignals, timeoutSignal } from 'extra-abort'
 import { Falsy } from 'justypes'
@@ -26,7 +26,7 @@ export class UIDClient {
 
   private getCommonTransformers(
     options: IUIDClientRequestOptions
-  ): Array<IHTTPOptionsTransformer | Falsy> {
+  ): Array<IRequestOptionsTransformer | Falsy> {
     const auth = this.options.basicAuth
 
     return [
@@ -40,7 +40,7 @@ export class UIDClient {
         )
       ]))
     , (options.keepalive ?? this.options.keepalive) && keepalive()
-    , header('Accept-Version', '2.3.0')
+    , header('Accept-Version', '3.0.0')
     ]
   }
 
