@@ -1,6 +1,5 @@
 import { server } from '@test/uid.mock.js'
 import { UIDClient } from '@src/uid-client.js'
-import '@blackglory/jest-matchers'
 import './polyfill.js'
 
 beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
@@ -11,21 +10,17 @@ describe('UIDClient', () => {
   test('nanoid(): Promise<string>', async () => {
     const client = createClient()
 
-    const result = client.nanoid()
-    const proResult = await result
+    const result = await client.nanoid()
 
-    expect(result).toBePromise()
-    expect(proResult).toBe('nanoid')
+    expect(result).toBe('nanoid')
   })
 
   test('uuid(): Promise<string>', async () => {
     const client = createClient()
 
-    const result = client.uuid()
-    const proResult = await result
+    const result = await client.uuid()
 
-    expect(result).toBePromise()
-    expect(proResult).toBe('uuid')
+    expect(result).toBe('uuid')
   })
 })
 
