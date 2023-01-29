@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/BlackGlory/uid-js/compare/v0.5.0...v0.6.0) (2023-01-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* It requires UID^4.0.0.
+
+* upgrade dependencies ([832bbaf](https://github.com/BlackGlory/uid-js/commit/832bbaf0aa46ee7143143f1928af3ea5c34156a2))
+
 ## [0.5.0](https://github.com/BlackGlory/uid-js/compare/v0.4.2...v0.5.0) (2022-12-02)
 
 
