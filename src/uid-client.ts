@@ -5,6 +5,8 @@ import { ok, toText } from 'extra-response'
 import { raceAbortSignals, timeoutSignal } from 'extra-abort'
 import { Falsy } from 'justypes'
 
+const expectedVersion = '^4.0.0'
+
 export interface IUIDClientOptions {
   server: string
   basicAuth?: {
@@ -40,7 +42,7 @@ export class UIDClient {
         )
       ]))
     , (options.keepalive ?? this.options.keepalive) && keepalive()
-    , header('Accept-Version', '3.0.0')
+    , header('Accept-Version', expectedVersion)
     ]
   }
 
