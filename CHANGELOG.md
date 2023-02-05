@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/BlackGlory/uid-js/compare/v0.6.1...v0.7.0) (2023-02-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* - Renamed `UIDClient#nanoid` to `UIDClient#generateNanoID`
+- Renamed `UIDClient#uuid` to `UIDClient#generateUUID`
+
+* rename ([72ba666](https://github.com/BlackGlory/uid-js/commit/72ba6667694670c790b7304409d67217ea289e56))
+
 ### [0.6.1](https://github.com/BlackGlory/uid-js/compare/v0.6.0...v0.6.1) (2023-01-30)
 
 
