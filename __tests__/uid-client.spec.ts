@@ -7,18 +7,18 @@ beforeEach(() => server.resetHandlers())
 afterAll(() => server.close())
 
 describe('UIDClient', () => {
-  test('nanoid(): Promise<string>', async () => {
+  test('generateNanoID', async () => {
     const client = createClient()
 
-    const result = await client.nanoid()
+    const result = await client.generateNanoID()
 
     expect(result).toBe('nanoid')
   })
 
-  test('uuid(): Promise<string>', async () => {
+  test('generateUUID', async () => {
     const client = createClient()
 
-    const result = await client.uuid()
+    const result = await client.generateUUID()
 
     expect(result).toBe('uuid')
   })

@@ -26,6 +26,34 @@ export interface IUIDClientRequestOptions {
 export class UIDClient {
   constructor(private options: IUIDClientOptions) {}
 
+  /**
+   * @throws {AbortError}
+   */
+  async generateNanoID(options: IUIDClientRequestOptions = {}): Promise<string> {
+    const req = get(
+      ...this.getCommonTransformers(options)
+    , appendPathname('/nanoid')
+    )
+
+    return await fetch(req)
+      .then(ok)
+      .then(toText)
+  }
+
+  /**
+   * @throws {AbortError}
+   */
+  async generateUUID(options: IUIDClientRequestOptions = {}): Promise<string> {
+    const req = get(
+      ...this.getCommonTransformers(options)
+    , appendPathname('/uuid')
+    )
+
+    return await fetch(req)
+      .then(ok)
+      .then(toText)
+  }
+
   private getCommonTransformers(
     options: IUIDClientRequestOptions
   ): Array<IRequestOptionsTransformer | Falsy> {
@@ -44,33 +72,5 @@ export class UIDClient {
     , (options.keepalive ?? this.options.keepalive) && keepalive()
     , header('Accept-Version', expectedVersion)
     ]
-  }
-
-  /**
-   * @throws {AbortError}
-   */
-  async nanoid(options: IUIDClientRequestOptions = {}): Promise<string> {
-    const req = get(
-      ...this.getCommonTransformers(options)
-    , appendPathname('/nanoid')
-    )
-
-    return await fetch(req)
-      .then(ok)
-      .then(toText)
-  }
-
-  /**
-   * @throws {AbortError}
-   */
-  async uuid(options: IUIDClientRequestOptions = {}): Promise<string> {
-    const req = get(
-      ...this.getCommonTransformers(options)
-    , appendPathname('/uuid')
-    )
-
-    return await fetch(req)
-      .then(ok)
-      .then(toText)
   }
 }

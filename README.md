@@ -28,7 +28,7 @@ interface IUIDClientRequestOptions {
 class UIDClient {
   constructor(options: IUIDClientOptions)
 
-  nanoid(options: IUIDClientRequestOptions = {}): Promise<string>
-  uuid(options: IUIDClientRequestOptions = {}): Promise<string>
+  generateNanoID(options: IUIDClientRequestOptions = {}): Promise<string>
+  generateUUID(options: IUIDClientRequestOptions = {}): Promise<string>
 }
 ```
